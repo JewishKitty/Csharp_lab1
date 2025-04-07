@@ -4,7 +4,7 @@ namespace Logic
 {
     /*
      Класс Avatar наследуется из класса BaseConjuction
-     Поля: IsUsingWaterMagic - используется ли сейчас магия воды, IsUsingElectricBomb - используется ли сейчас электробомба, avatarName - имя аватара
+     Поля: firtsVariable - используется ли сейчас магия воды, secondVariable - используется ли сейчас электробомба, avatarName - имя аватара
      */
     class Avatar : BaseConjunction
     {
