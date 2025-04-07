@@ -1,0 +1,53 @@
+using System;
+using System.Diagnostics.Metrics;
+using Validation;
+
+namespace Logic
+{
+    class Triangle
+    {
+        //Поля со свойствами
+        private double a { get; set; }
+        private double b { get; set; }
+        private double c { get; set; }
+
+        // Конструкторы
+        // Конструктор копирования
+        public Triangle(Triangle original)
+        {
+            this.a = original.a;
+            this.b = original.b;
+            this.c = original.c;
+        }
+
+        // Конструктор класса
+        public Triangle(double a, double b, double c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        // Методы
+        // Поиск дизъюнкта
+        public bool DoExist()
+        {
+            bool existing = ( (a+b) > c) && ((a + c) > b) && ((b + c) > a);
+            return existing;
+        }
+
+        public double Square()
+        {
+            double p = (a + b + c) / 2.0;
+            double square = Math.Sqrt(p*(p-a)*(p-b)*(p-c));
+            return square;
+        }
+
+       
+
+        public override string ToString()
+        {
+            return $"Длинна a: {a}, Длинна b: {b}, Длинна c: {c}, Существование: {DoExist()}";
+        }
+    }
+}
